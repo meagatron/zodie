@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zodie Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noticia+Text" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+           /* var loading = $('#loadbar').hide();
+            $(document)
+                .ajaxStart(function () {
+                    loading.show();
+                }).ajaxStop(function () {
+                loading.hide();
+            });
+            */
+            $(".quiz label.btn").on('click',function () { console.log(this)
+                var id = $(this).parent().attr("id");
+                var quiz = Number($(this).parent().data("quiz"));
+                $("#" + id).fadeOut();
+                $('#loadbar').show();
+                setTimeout(function(){
+                    $('#loadbar').fadeOut();
+                    switch(quiz) {
+                        case 3:
+                            $("#thanks").show()
+                        default:
+                            var q = quiz + 1
+                            var id = "#quiz" + q
+                            $(id).show()
+                    }
+                    /*$( "#answer" ).html(  $(this).checking(choice) );*/
+                    /*$('#quiz').show();*/
+                    /* something else */
+                }, 1500);
+            });
+
+            /*var $ans = 3;
+
+            $.fn.checking = function(ck) {
+                if (ck != $ans)
+                    return 'INCORRECT';
+                else
+                    return 'CORRECT';
+            };
+            */
+        });
+    </script>
+</head>
+<body>
+
+<div class="container-fluid bg-info">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="col-xs-3 col-xs-offset-5">
+                    <div id="loadbar" style="display: none;">
+                        <div class="blockG" id="rotateG_01"></div>
+                        <div class="blockG" id="rotateG_02"></div>
+                        <div class="blockG" id="rotateG_03"></div>
+                        <div class="blockG" id="rotateG_04"></div>
+                        <div class="blockG" id="rotateG_05"></div>
+                        <div class="blockG" id="rotateG_06"></div>
+                        <div class="blockG" id="rotateG_07"></div>
+                        <div class="blockG" id="rotateG_08"></div>
+                    </div>
+                </div>
+
+                <div class="quiz" id="quiz1" data-quiz="1" data-toggle="buttons">
+                            <h3 class="quiz-header"> <span class="label label-warning" id="qid">1</span> When is your Birthday?</h3>
+                    <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1" id="answers">January 22nd - February 18th (Aquarius)</label>
+                    <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">February 19th - March 20th (Pisces) </label>
+                    <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">March 21st - April 19th (Aries)</label>
+                    <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">April 20th - May 20th (Taurus)</label>
+                    <label class="element-animation5 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">May 21st - June 20th (Gemini)</label>
+                    <label class="element-animation6 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">June 21st - July 22nd (Cancer)</label>
+                    <label class="element-animation7 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">Jusy 23rd - August 22nd (Leo)</label>
+                    <label class="element-animation8 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">August 23rd - September 22nd (Virgo)</label>
+                    <label class="element-animation9 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">September 23rd - October 22nd (Libra)</label>
+                    <label class="element-animation10 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">October 23rd - November 21st (Scorpio)</label>
+                    <label class="element-animation11 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">November 22nd - December 21st (Sagittarius)</label>
+                    <label class="element-animation12 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">December 22nd - January 19th (Capricorn)</label>
+                </div>
+
+                <div class="quiz" id="quiz2" data-quiz="2" data-toggle="buttons" style="display:none">
+                    <h3 class="quiz-header"> <span class="label label-warning" id="qid">1</span> Where would your ideal date be?</h3>
+                    <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1" id="answers">Beach</label>
+                    <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">Library</label>
+                    <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">Coffee Shop/Restaurant</label>
+                    <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">Adventure</label>
+                    <label class="element-animation5 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">Vacation</label>
+
+                </div>
+
+                <div class="quiz" id="quiz3" data-quiz="3" data-toggle="buttons" style="display:none">
+                    <h3 class="quiz-header"> <span class="label label-warning" id="qid">1</span> What do you like to do for fun?</h3>
+                    <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1" id="answers">Curl up with a book</label>
+                    <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">Hit the bars and PARTY!</label>
+                    <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">See the latest movie</label>
+                    <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">Play with my cats</label>
+                    <label class="element-animation5 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">Netfliks...what else is there?</label>
+
+                </div>
+
+
+                <div id="thanks" style="display:none">
+                    <h3 class="quiz-header">Thanks for completing the quiz!</h3>
+                    <p>You will recieve a message with your matches shortly. Please return to the homepage to see the latest updates and news for the Zodie Team.</p>
+                    <button class="callout"><a href="index.html">RETURN TO HOME PAGE</a></button>
+                </div>
+            </div>
+            <div class="modal-footer text-muted">
+                <span id="answer"></span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
