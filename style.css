@@ -115,6 +115,11 @@ li.nav-item {
     padding-bottom: 20px;
 }
 
+.about-h2 {
+    font-family: "Six Caps", sans-serif;
+    font-size: 32px;
+}
+
 .col-lg-3 h2{
     font-size: 24px;
     font-family: "Six Caps", sans-serif;
@@ -122,7 +127,7 @@ li.nav-item {
 
 .about-p {
     font-family: "Wire One", sans-serif;
-    font-size: 18px;
+    font-size: 28px;
     font-weight: bolder;
 }
 
