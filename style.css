@@ -103,10 +103,12 @@ li.nav-item {
     margin-top: 20px;
     color: white;
     font-family: "Wire One", sans-serif;
-    font-weight: 100;
-    font-size: 14px;
+    font-weight: bolder;
+    font-size: 24px;
     margin-bottom: 40px;
 }
+
+
 
 .fa-4x {
     color: #FCC67C;
@@ -114,8 +116,14 @@ li.nav-item {
 }
 
 .col-lg-3 h2{
-    font-size: 1.25em;
+    font-size: 24px;
     font-family: "Six Caps", sans-serif;
+}
+
+.about-p {
+    font-family: "Wire One", sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
 }
 
 /*REFFERENCES SECTION*/
