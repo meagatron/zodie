@@ -8,6 +8,16 @@ body {
     margin-bottom: 50px;
 }
 
+@font-face {
+  font-family: "Six Caps";
+  src: url("https://fonts.googleapis.com/css?family=Six+Caps"),
+}
+
+@font-face {
+  font-family: "Wire One";
+  src: url("https://fonts.googleapis.com/css?family=Wire+One"),
+}
+
 /* Navigation CSS */
 
 .nav-item a{
